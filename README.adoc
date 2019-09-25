@@ -7,3 +7,12 @@ link:https://falko.github.io/bpmn-extensions/i18n/bpmn-i18n.html[HTML Documentat
 
 This XML schema defines and documents BPMN 2.0 extension elements
 to interchange localized names and documentations.
+
+----
+## Implementers
+
+Tools that implement the specification include:
+
+- 
+
+link:https://github.com/bpmn-miwg/bpmn-i18n/edit/master/README.adoc[Add a tool by creating a pull request.]
