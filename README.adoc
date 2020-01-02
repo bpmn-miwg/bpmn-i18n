@@ -8,6 +8,8 @@ link:https://falko.github.io/bpmn-extensions/i18n/bpmn-i18n.html[HTML Documentat
 This XML schema defines and documents BPMN 2.0 extension elements
 to interchange localized names and documentations.
 
+In order to declare the language of default name and documentation attributes, it is recommended to declare that language on the root 'definitions' node.
+
 Implementers
 ------------
 

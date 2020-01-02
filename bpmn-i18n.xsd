@@ -22,9 +22,14 @@
         An extension element that can be used on any BPMN, CMMN or DMN element
         that allows extensions.
 
-        i18n:translation allows to interchange localized attributes of a BPMN element.
+        i18n:translation allows to interchange localized attributes of a BPMN element using the xml:lang attribute to declare the value's language.
+        
+        The xml:lang attribute should also be declared on the bpmn:definitions root element to declare the default language, i.e. the language of all standard attributes.
 
         Example:
+        <?xml version="1.0" encoding="UTF-8"?>
+        <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" ... xml:lang="en">
+        ... 
         <bpmn:startEvent id="StartEvent_1" name="Start Event" isInterrupting="true">
           <bpmn:extensionElements>
             <i18n:translation xml:lang="de">Startereignis</i18n:translation>
@@ -33,6 +38,7 @@
           </bpmn:extensionElements>
           <bpmn:documentation>A start event.</bpmn:documentation>
         </bpmn:startEvent>
+        ...
       </documentation>
     </annotation>
   </element>
