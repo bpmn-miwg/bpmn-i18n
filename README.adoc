@@ -15,6 +15,6 @@ Implementers
 
 Tools that implement the specification include:
 
-- 
+- link:https://www.trisotech.com/digital-enterprise-suite/[Trisotech Digital Enterprise Suite] v10.3.0 [BPMN/CMMN/DMN]
 
 link:https://github.com/bpmn-miwg/bpmn-i18n/edit/master/README.adoc[Add a tool by creating a pull request.]
