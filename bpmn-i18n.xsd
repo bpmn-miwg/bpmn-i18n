@@ -9,6 +9,9 @@
   xmlns:cmmn="http://www.omg.org/spec/CMMN/20151109/MODEL"
   xmlns:dmn="http://www.omg.org/spec/DMN/20151101/dmn.xsd">
 
+  <import namespace="http://www.w3.org/XML/1998/namespace"
+          schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+
   <annotation>
     <documentation>
       This XML schema defines an extension element for BPMN, CMMN and DMN
