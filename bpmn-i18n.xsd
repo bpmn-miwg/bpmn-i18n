@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema
-  xmlns="http://www.w3.org/2001/XMLSchema"
+<xsd:schema
+  xmlns="http://www.omg.org/spec/BPMN/non-normative/extensions/i18n/1.0"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns:xml="http://www.w3.org/XML/1998/namespace"
   targetNamespace="http://www.omg.org/spec/BPMN/non-normative/extensions/i18n/1.0"
@@ -9,27 +9,31 @@
   xmlns:cmmn="http://www.omg.org/spec/CMMN/20151109/MODEL"
   xmlns:dmn="http://www.omg.org/spec/DMN/20151101/dmn.xsd">
 
-  <annotation>
-    <documentation>
+  <xsd:import namespace="http://www.w3.org/XML/1998/namespace"
+              schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+
+  <xsd:annotation>
+    <xsd:documentation>
       This XML schema defines an extension element for BPMN, CMMN and DMN
       to interchange localized names, documentation and other attributes.
-    </documentation>
-  </annotation>
+    </xsd:documentation>
+  </xsd:annotation>
 
-  <element name="translation" type="tTranslation" minOccurs="0" maxOccurs="unbounded">
-    <annotation>
-      <documentation>
+  <xsd:element name="translation" type="tTranslation">
+    <xsd:annotation>
+      <xsd:documentation>
+        <![CDATA[
         An extension element that can be used on any BPMN, CMMN or DMN element
         that allows extensions.
 
         i18n:translation allows to interchange localized attributes of a BPMN element using the xml:lang attribute to declare the value's language.
-        
+
         The xml:lang attribute should also be declared on the bpmn:definitions root element to declare the default language, i.e. the language of all standard attributes.
 
         Example:
         <?xml version="1.0" encoding="UTF-8"?>
         <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" ... xml:lang="en">
-        ... 
+        ...
         <bpmn:startEvent id="StartEvent_1" name="Start Event" isInterrupting="true">
           <bpmn:extensionElements>
             <i18n:translation xml:lang="de">Startereignis</i18n:translation>
@@ -39,47 +43,48 @@
           <bpmn:documentation>A start event.</bpmn:documentation>
         </bpmn:startEvent>
         ...
-      </documentation>
-    </annotation>
-  </element>
+        ]]>
+      </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:complexType name="tTranslation" mixed="true">
     <xsd:sequence>
       <xsd:any namespace="##any" processContents="lax" minOccurs="0"/>
     </xsd:sequence>
     <xsd:attribute name="id" type="xsd:ID" use="optional">
-      <annotation>
-        <documentation>
+      <xsd:annotation>
+        <xsd:documentation>
           Optional. Specifies a unique ID for the element.
-        </documentation>
-      </annotation>
+        </xsd:documentation>
+      </xsd:annotation>
     </xsd:attribute>
     <xsd:attribute name="target" type="xsd:string" use="optional" default="@name">
-      <annotation>
-        <documentation>
+      <xsd:annotation>
+        <xsd:documentation>
           Optional. Specifies a which attribute or child element is translated.
           It MUST be an XPath expression relative to the parent element that
           contains this extension element.
           Default is '@name' i.e. the name attribute of the parent element.
-        </documentation>
-      </annotation>
+        </xsd:documentation>
+      </xsd:annotation>
     </xsd:attribute>
     <xsd:attribute name="textFormat" type="xsd:string" use="optional" default="text/plain">
-      <annotation>
-        <documentation>
+      <xsd:annotation>
+        <xsd:documentation>
           Optional. Specifies the format of the translation contents.
           It MUST follow the MIME Media Type format.
           Default is 'text/plain'.
-        </documentation>
-      </annotation>
+        </xsd:documentation>
+      </xsd:annotation>
     </xsd:attribute>
     <xsd:attribute ref="xml:lang" use="optional">
-      <annotation>
-        <documentation>
+      <xsd:annotation>
+        <xsd:documentation>
           Optional. Specifies the language used in the translation contents.
           It MUST be a ISO 639 natural language code.
-        </documentation>
-      </annotation>
+        </xsd:documentation>
+      </xsd:annotation>
     </xsd:attribute>
   </xsd:complexType>
 
-</schema>
+</xsd:schema>
