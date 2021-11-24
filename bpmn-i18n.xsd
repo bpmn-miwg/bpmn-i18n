@@ -16,7 +16,7 @@
     </documentation>
   </annotation>
 
-  <element name="translation" type="tTranslation" minOccurs="0" maxOccurs="unbounded">
+  <element name="translation" type="tTranslation">
     <annotation>
       <documentation>
         <![CDATA[
