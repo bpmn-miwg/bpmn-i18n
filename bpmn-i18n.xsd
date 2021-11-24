@@ -35,12 +35,12 @@
         <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" ... xml:lang="en">
         ...
         <bpmn:startEvent id="StartEvent_1" name="Start Event" isInterrupting="true">
+          <bpmn:documentation>A start event.</bpmn:documentation>
           <bpmn:extensionElements>
             <i18n:translation xml:lang="de">Startereignis</i18n:translation>
             <i18n:translation target="@isInterrupting" xml:lang="de">ja</i18n:translation>
             <i18n:translation target="documentation" xml:lang="de">Ein Startereignis.</i18n:translation>
           </bpmn:extensionElements>
-          <bpmn:documentation>A start event.</bpmn:documentation>
         </bpmn:startEvent>
         ...
         ]]>
